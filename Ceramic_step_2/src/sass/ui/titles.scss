@@ -1,0 +1,7 @@
+@use "/src/sass/base/mixins.scss" as *;
+
+.title-h1-italic {
+	@include title;
+	font-size: 24px;
+	font-style: italic;
+}

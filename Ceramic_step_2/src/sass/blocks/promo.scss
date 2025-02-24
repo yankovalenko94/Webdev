@@ -1,0 +1,16 @@
+.promo {
+	padding-top: 50px;
+	&__title {
+		margin-block-start: 50px;
+		padding-inline: 5px;
+	}
+	&__img {
+		margin: 40px auto 0 auto;
+		width: 270px;
+		height: 377px;
+		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+	}
+	&__btn {
+		margin: 18px auto 0 auto;
+	}
+}
