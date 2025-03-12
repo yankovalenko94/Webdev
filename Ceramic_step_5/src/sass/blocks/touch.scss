@@ -1,0 +1,30 @@
+.touch {
+	padding-top: 60px;
+	&__wrapper {
+		margin-top: 60px;
+	}
+	&__img {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.touch {
+		&__img {
+			display: block;
+			width: 550px;
+			height: 342px;
+			object-fit: cover;
+			box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.touch {
+		&__img {
+			width: 100%;
+			height: 356px;
+		}
+	}
+}
