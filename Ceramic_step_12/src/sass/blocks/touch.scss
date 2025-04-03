@@ -1,0 +1,146 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.touch {
+	padding-top: 60px;
+	&__wrapper {
+		margin-top: 60px;
+	}
+	&__img {
+		display: none;
+	}
+	&__fieldset {
+		border: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__label {
+		display: block;
+		color: $dark;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 28px;
+		&:nth-child(2) {
+			margin-top: 8px;
+		}
+	}
+	&__input {
+		width: 100%;
+		height: 48px;
+		padding: 10px 15px;
+		color: $dark;
+		border-radius: 2px;
+		border: 1px solid #e2e1e5;
+		background: #fff;
+		&:focus {
+			border: none;
+			outline: 1px solid $dark;
+		}
+		&::placeholder {
+			color: $ui-disabled;
+			font-size: 14px;
+		}
+	}
+	&__textarea {
+		width: 100%;
+		height: 132px;
+		padding: 10px 15px;
+		color: $dark;
+		border-radius: 2px;
+		border: 1px solid #e2e1e5;
+		background: #fff;
+		resize: none;
+		&:focus {
+			border: none;
+			outline: 1px solid $dark;
+		}
+		&::placeholder {
+			color: $ui-disabled;
+			font-size: 14px;
+		}
+	}
+	&__check-block {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+		a {
+			color: #a22dc6;
+			text-decoration: none;
+			margin-left: 2px;
+		}
+	}
+	&__checkbox {
+		margin-right: 15px;
+		width: 15px;
+		height: 15px;
+	}
+	&__btn {
+		margin-top: 20px;
+	}
+	&__decor {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.touch {
+		&__form {
+			position: relative;
+			width: 300px;
+			padding-left: 24px;
+		}
+		&__decor {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.touch {
+		&__img {
+			display: block;
+			width: 550px;
+			height: 342px;
+			object-fit: cover;
+			box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+		}
+		&__input {
+			&:hover {
+				border: none;
+				outline: 1px solid $dark;
+			}
+		}
+		&__form {
+			padding-left: 20px;
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.touch {
+		padding-top: 100px;
+		&__img {
+			width: 100%;
+			height: 356px;
+		}
+		&__form {
+			width: auto;
+			padding-left: 143px;
+		}
+		&__fieldset {
+			display: flex;
+			column-gap: 45px;
+		}
+		&__label,
+		&__check-block,
+		&__input,
+		&__textarea {
+			width: 300px;
+		}
+		&__decor {
+			right: 75px;
+		}
+	}
+}
