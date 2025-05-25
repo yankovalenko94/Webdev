@@ -1,0 +1,48 @@
+.findus {
+	padding-top: 60px;
+	&__wrapper {
+		margin-top: 60px;
+		iframe {
+			width: 100%;
+			height: 206px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.findus {
+		&__wrapper {
+			padding: 0 29px;
+			iframe {
+				height: 400px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.findus {
+		&__wrapper {
+			padding: 0;
+			iframe {
+				display: block;
+				width: 663px;
+				height: 500px;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.findus {
+		padding-top: 100px;
+		&__wrapper {
+			margin-top: 80px;
+			iframe {
+				width: 801px;
+				height: 604px;
+			}
+		}
+	}
+}
