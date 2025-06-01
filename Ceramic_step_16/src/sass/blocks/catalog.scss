@@ -1,0 +1,136 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as *;
+
+.catalog {
+	padding-top: 50px;
+	&__title {
+		margin-top: 60px;
+	}
+	&__tabs {
+		display: flex;
+		column-gap: 50px;
+		row-gap: 13px;
+		flex-wrap: wrap;
+		margin-top: 60px;
+		border: 1px solid $dark;
+		padding: 13px 25px;
+	}
+	&__tab {
+		position: relative;
+		border: none;
+		background: none;
+		padding: 0;
+		color: #000;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		text-transform: uppercase;
+		cursor: pointer;
+		&_active::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #000;
+			bottom: -1px;
+		}
+	}
+	&__content {
+		margin-top: 60px;
+		&-item {
+			flex-direction: column;
+			row-gap: 20px;
+		}
+	}
+	&__card {
+		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+		&-img {
+			width: 100%;
+		}
+		&-info {
+			padding: 11px 12px 17px 12px;
+			border: 1px solid $dark;
+			border-top: none;
+		}
+		&-name {
+			color: #000;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+		&-price {
+			margin-top: 8px;
+			color: #000;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.catalog {
+		&__tabs {
+			width: 460px;
+		}
+		&__content {
+			padding: 10px;
+			position: relative;
+			@include angle-decoration;
+			&-item {
+				align-items: flex-start;
+				flex-direction: row;
+				flex-wrap: wrap;
+				row-gap: 20px;
+				column-gap: 20px;
+			}
+		}
+		&__card {
+			width: 340px;
+			min-height: 275px;
+			&-img {
+				height: 198px;
+				object-fit: cover;
+			}
+			&-price {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.catalog {
+		&__content {
+			padding: 25px;
+			&-item {
+				gap: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.catalog {
+		padding-top: 40px;
+		&__title {
+			margin-top: 100px;
+		}
+		&__content {
+			&-item {
+				row-gap: 25px;
+				column-gap: 83px;
+			}
+		}
+		&__card {
+			width: 285px;
+			min-height: 250px;
+			&-img {
+				height: 180px;
+			}
+		}
+	}
+}
