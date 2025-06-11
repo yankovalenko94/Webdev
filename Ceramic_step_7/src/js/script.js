@@ -26,6 +26,7 @@ try {
 			},
 			1920: {
 				spaceBetween: 35,
+				slidesPerView: 3,
 			},
 		},
 		modules: [Navigation, Pagination],
